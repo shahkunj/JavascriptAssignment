@@ -3,141 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 2 assignment2</title>
+    <title>Day2 Assignment 2</title>
 </head>
 <body>
-    <h1><mark>Q-2 as Assignment2</mark>- Difference between var , let and const</h1>
-    <p>One of the features that came with ES6 is the addition of let and const,</br> which can be used for variable declarationOne of the features that came with ES6 is the addition of let and const, which can be used for variable declaration</p> 
-    <p>we'll discuss var, let and const  with respect to their scope, use, and hoisting. </p>
-    <h2>Var</h2>
-    <p>Before the advent of ES6, var declarations ruled. There are issues associated with variables declared with var, though.</br> That is why it was necessary for new ways to declare variables to emerge. First, let's get to understand var more before we discuss those issues.</p>
+  <h1><mark>Q-2 String and Array with Examples</mark></h1>
+  
+  <h2>String Length</h2>
+  <p> var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";</p>
+  
+  <script>
+    var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    // console.log(txt.length);
+    document.write(txt.length);
+  </script>
 
-    <h3>Scope of var</h3>
-    Scope essentially means where these variables are available for use. var declarations are globally scoped or function/locally scoped.</br>
+  <h2>indexOf() method returns the position of the first occurrence of a specified text</h2>
+  <pre> 
+    var str = "Please locate where 'locate' occurs!";
+    var pos = str.indexOf("locate");
+    document.write(pos);</pre>
 
-    The scope is global when a var variable is declared outside a function. </br>This means that any variable that is declared with var outside a function block is available for use in the whole window.</br>
+  <script>
+      var str = "Please locate where 'locate' occurs!";
+      var pos = str.indexOf("locate");
+      document.write(pos);
+  </script>
 
-    var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function.
+<h2>lastIndexOf() method returns the index of the last occurrence of a specified text in a string</h2>
+<pre>
+  var str = "Please locate where 'locate' occurs!";
+  var pos = str.lastIndexOf("locate");
+  document.write(pos);
+</pre>
+  <script>
+  var str = "Please locate where 'locate' occurs!";
+  var pos = str.lastIndexOf("locate");
+  document.write(pos);
+  </script>
 
-    <p>to view example please go to assignment2.html file and visit to console press F12 for output</p>
-    <script>
-        var tester = "hey hi";
-        
-        function newFunction() {
-            var hello = "hello";
-        }
-        console.log(hello); // error: hello is not defined
+<p>Both indexOf(), and lastIndexOf() return -1 if the text is not found:</p>
+<pre>
+  var str = "Please locate where 'locate' occurs!";
+  var pos = str.indexOf("John");
+  document.write(pos);
+</pre>
+
+  <script>
+  var str = "Please locate where 'locate' occurs!";
+  var pos = str.indexOf("John");
+  document.write(pos);
+  </script>
+
+  <p>Both methods accept a second parameter as the starting position for the search:</p>
+  <pre>
+    var str = "Please locate where 'locate' occurs!";
+    var pos = str.indexOf("locate",15);
+    document.write(pos);
+  </pre>
+
+  <script>
+    var str = "Please locate where 'locate' occurs!";
+    var pos = str.indexOf("locate",15);
+    document.write(pos);
+    </script>
+  <p>The lastIndexOf() methods searches backwards (from the end to the beginning),<br> meaning: if the second parameter is 15, the search starts at position 15, and searches to the beginning of the string.</p>
+  <p>Remember that the lastIndexOf() method searches backwards, so position 15 means start the search at position 15, and search to the beginning.</p>
+  <p>Position 15 is position 15 from the beginning.</p>
+  <pre>
+    var str = "Please locate where 'locate' occurs!";
+    var pos = str.lastIndexOf("locate", 15);
+    document.write(pos);
+  </pre>
+
+  <script>
+    var str = "Please locate where 'locate' occurs!";
+    var pos = str.lastIndexOf("locate", 15);
+    document.write(pos);
     </script>
 
-    <h3>var variables can be re-declared and updated</h3>
-    <p>This means that we can do this within the same scope and won't get an error.</p>
+  <h2>Searching for a String in a String</h2>
+  <pre>  var str = "Please locate where 'locate' occurs!";
+      var pos = str.search("locate");  
+  </pre>    
     <script>
-        var greeter = "hey hi";
-        var greeter = "say Hello instead";
-        console.log(greeter);
+    var str = "Please locate where 'locate' occurs!";
+    var pos = str.search("locate");
+    document.write(pos);
+    </script>
+  <p>
+  <mark>
+    
+the two methods are NOT equal. These are the differences:
+
+The search() method cannot take a second start position argument.
+The indexOf() method cannot take powerful search values (regular expressions).
+  </mark></p>
+    
+  <h2>Extracting String Parts</h2>
+    <p>There are 3 methods for extracting a part of a string:</p>
+
+   <h2>The slice() Method</h2> 
+   <p>slice() extracts a part of a string and returns the extracted part in a new string.  </p>
+   <pre>
+      var str = "Apple, Banana, Kiwi";
+      var res = str.slice(7,13);
+      var res1 = str.slice(7);
+      var res2 = str.slice(-12);
+      document.write(res2 );
+      document.write(res );
+      document.write(res1);  
+   </pre>
+   <script>
+    var str = "Apple, Banana, Kiwi";
+    var res = str.slice(7,13);
+    var res1 = str.slice(7);
+    var res2 = str.slice(-12);
+    document.write(res2 +"</br>");
+    document.write(res +"</br>");
+    document.write(res1); 
+
     </script>
 
-    <p> another method for giving value to variable is below </p>
-    <script>
-        var greeter = "hey hi";
-        greeter = "say Hellllllllll instead";
-        console.info(greeter);
-    </script>
+  <h2>The substring() Method</h2>
+    <p>substring() is similar to slice().<br>
 
-    <h2>Hoisting of var</h2>
-    <p>Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. This means that if we do this:</p>
-    <script>
-        console.log (greeter2);
-        var greeter2 = "say hello to kunj"
-    </script>
-    <p>it will interpret as this</p>
-
-    <script>
-        var greeter2;
-        console.log(greeter2); // greeter is undefined
-        greeter2 = "say hello"
-    </script>
-    <p>So var variables are hoisted to the top of their scope and initialized with a value of undefined.</p>
-    <p><mark>If you have used greeter in other parts of your code, you might be surprised at the output you might get.This will likely cause a lot of bugs in your code. This is why let and const are necessary.</mark></p>
-
-    <h2>Let</h2>
-    <p>let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations.It also solves the problem with var that we just covered. Let's consider why this is so.</p>
-    <p><h3>let is block scoped</h3>
-    A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is a block.
-
-    So a variable declared in a block with let  is only available for use within that block. </p>
-
-        <script>
-            let greeting = "say Hi";
-            let times = 4;
-
-            if (times > 3) {
-                    let hello = "say Hello instead";
-                    console.log(hello);// "say Hello instead"
-                }
-            console.log(hello) // hello is not defined
+      The difference is that substring() cannot accept negative indexes.</p>
+      <pre>
+        var str = "Apple, Banana, Kiwi";
+        var res = str.substring(14,19);
+        document.write(res);
+      </pre>
+      <script>
+        var str = "Apple, Banana, Kiwi";
+        var res = str.substring(14,19);
+        document.write(res);
         </script>
-        <h2>let can be updated but not re-declared</h2>
-<p>Just like var,  a variable declared with let can be updated within its scope. Unlike var, a let variable cannot be re-declared within its scope. So while this will work:</p>
-<script>
-    let greeting = "say Hi";
-    greeting = "say Hello instead";
-    console.log(greeting);
-</script>
+       <br><br> <mark>If you omit the second parameter, substring() will slice out the rest of the string.
 
-<p>However, if the same variable is defined in different scopes, there will be no error:</p>
-<script>
-    let greeting2 = "say Hi";
-    if (true) {
-        let greeting2 = "say Hello instead";
-        console.log(greeting2); // "say Hello instead"
+        </mark>
+
+  <h2>The substr() Method</h2>
+  <p>substr() is similar to slice().<br>
+
+    The difference is that the second parameter specifies the length of the extracted part.</p>
+    <pre>
+      var str = "Apple, Banana, Kiwi";
+      var res = str.substr(7,6);
+      document.write(res);
+    </pre>
+    <script>
+      var str = "Apple, Banana, Kiwi";
+      var res = str.substr(7,6);
+      document.write(res);
+      </script>
+
+   <br><br><mark>
+        If you omit the second parameter, substr() will slice out the rest of the string.
+      </mark>
+      <pre>
+        var str = "Apple, Banana, Kiwi";
+        var res = str.substr(7);
+        document.write(res);  
+        var res = str.substr(-4);
+        document.write(res);
+      </pre>
+
+      <script>
+        var str = "Apple, Banana, Kiwi";
+        var res = str.substr(7);
+        document.write(res + "</br>");
+        var res = str.substr(-4);
+        document.write(res);
+        </script>
+    <h2>Replacing String Content</h2>
+    <p>The replace() method replaces a specified value with another value in a string:</p>
+    <pre> 
+      function myFunction() {
+      var str = document.getElementById("demo").innerHTML; 
+      var txt = str.replace("Microsoft","linux");
+      document.getElementById("demo").innerHTML = txt;
     }
-    console.log(greeting2); // "say Hi"
-</script>
-<mark>This fact makes let a better choice than var. When using let, you don't have to bother if you have used a name for a variable before as a variable exists only within its scope.
+  </pre>
 
-Also, since a variable cannot be declared more than once within a scope, then the problem discussed earlier that occurs with var does not happen.</mark>
+    <button onclick="myFunction()">Try it</button>
 
-<h2>Hoisting of let</h2>
-<p>Just like  var, let declarations are hoisted to the top. Unlike var which is initialized as undefined,<br/> the let keyword is not initialized. So if you try to use a let variable before declaration, you'll get a Reference Error.</p>
+    <p id="demo">Please visit Microsoft!</p>
 
-<h1>Const</h1>
-<p>Variables declared with the const maintain constant values. const declarations share some similarities with let declarations.</p>
-
-
-   <p> <u>const declarations are block scoped</u>
-Like let declarations, const declarations can only be accessed within the block they were declared.</p>
-
-<p><u>const cannot be updated or re-declared</u></p>
-<p>This means that the value of a variable declared with const remains the same within its scope.</p> <p>It cannot be updated or re-declared. So if we declare a variable with const, we can neither do this:</p>
-<script>
-    const greet = "say Hi";
-    greet = "say Hello instead";// error: Assignment to constant variable. 
-    console.log(greet);
-</script>
-
-<p>Every const declaration, therefore, must be initialized at the time of declaration.
-
-This behavior is somehow different when it comes to objects declared with const. While a const object cannot be updated, the properties of this objects can be updated. Therefore, if we declare a const object as this:</p>
-
-<script>
-    const greeting123 = {
-        message: "say Hi",
-        times: 4
+    <script>
+    function myFunction() {
+      var str = document.getElementById("demo").innerHTML; 
+      var txt = str.replace("Microsoft","linux");
+      document.getElementById("demo").innerHTML = txt;
     }
-    console.log(greeting123.message = "say Hello instead");
+    </script>
 
-</script>
-<h2>Hoisting of const</h2>
-<p>
-    Just like let, const declarations are hoisted to the top but are not initialized.
+    <br><br><mark>
+      The replace() method does not change the string it is called on. It returns a new string.<br><br>
 
-So just in case you missed the differences, here they are:
+By default, the replace() method replaces only the first match:
+    </mark>
+    
 
-var declarations are globally scoped or function scoped while let and const are block scoped.
-var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
-They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
-While var and let can be declared without being initialized, const must be initialized during declaration.
-</p>
+    <h2>concat() Method</h2>
+    <pre>
+      var text1 = "Hello";
+      var text2 = "World";
+      var text3 = text1.concat(" ", text2);
+      document.write(text3);
+    </pre>
+    <script>
+      var text1 = "Hello";
+      var text2 = "World";
+      var text3 = text1.concat(" ", text2);
+      document.write(text3);
+    </script>
+
+    <h2>String.trim()</h2>
+    <p>The trim() method removes whitespace from both sides of a string:    </p>
+    <pre>
+      var str = "       Hello World!        ";
+      document.write(str.trim());
+    </pre>
+    <script>
+      var str = "       Hello World!        ";
+      document.write(str.trim());
+    </script>
+    <h2>The charAt() Method</h2>
+    <p>The charAt() method returns the character at a specified index (position) in a string:    </p>
+    <pre>
+      var str = "HELLO WORLD";
+      document.write(str.charAt(6)); 
+    </pre>
+
+    
+
+    <script>
+      var str = "HELLO WORLD";
+      document.write(str.charAt(6));  
+    </script>
+
+    <h2>charCodeAt() </h2>
+    <p>The charCodeAt() method returns the unicode of the character at a specified index in a string: </p>
+    <pre>
+      var str = "HELLO WORLD";
+      document.write(str.charCodeAt(2));
+    </pre>
+    <Script>
+      var str = "HELLO WORLD";
+      document.write(str.charCodeAt(2));
+    </Script>
+
+    <h2>Converting a String to an Array</h2>
+    <p>A string can be converted to an array with the split() method:</p>
+    <pre>
+      var txt = "a,b,c,d,e";   // String
+      document.write(txt.split(" "));          // Split on comma
+    </pre>
+    <script>
+      var txt = "a,b,c,d,e";   // String
+      document.write(txt.split(" "));          // Split on comma
+    </script>
+
+
+    <h1><mark>Array Methods</mark></h1>
+
+    <h2>Arrays to Strings</h2>
+    <h2>toString()</h2>
+    <p>The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
+    <pre>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(fruits.toString());
+    </pre>
+    <script>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(fruits.toString());
+    </script>
+
+    <br><br><mark>
+      The join() method also joins all array elements into a string.<br>
+
+      It behaves just like toString(), but in addition you can specify the separator:
+    </mark>
+
+    <h2>join()</h2>
+    <pre>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(fruits.join("*"));
+    </pre>
+    <script>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(fruits.join("*"));
+    </script>
+
+    <h2>Deleting Elements</h2>
+    <pre>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write( fruits[0]); 
+    </pre>
+    <script>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write( fruits[0]); 
+    </script>
+
+    <h2>Splicing an Array
+    </h2>
+    <p>The splice() method can be used to add new items to an array:    </p>
+    <p>The splice() method adds new elements to an array.</p>
+    <pre>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo1").innerHTML = "Original Array:<br>" + fruits;
+      function myFunction() {
+        fruits.splice(2, 0, "Lemon", "Kiwi");
+        document.getElementById("demo2").innerHTML = "New Array:<br>" + fruits;
+      }
+    </pre>
+
+    <button onclick="myFunction()">Try it</button>
+    
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    
+    <script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = "Original Array:<br>" + fruits;
+    function myFunction() {
+      fruits.splice(2, 0, "Lemon", "Kiwi");
+      document.getElementById("demo2").innerHTML = "New Array:<br>" + fruits;
+    }
+    </script>
+
+    <h2>Merging (Concatenating) Arrays</h2>
+    <pre>
+      var myGirls = ["Cecilie", "Lone"];
+      var myBoys = ["Emil", "Tobias", "Linus"];
+      var myChildren = myGirls.concat(myBoys);   // Concatenates (joins) myGirls and myBoys
+      document.write(myChildren);
+    </pre>
+    <script>
+      var myGirls = ["Cecilie", "Lone"];
+      var myBoys = ["Emil", "Tobias", "Linus"];
+      var myChildren = myGirls.concat(myBoys);   // Concatenates (joins) myGirls and myBoys
+      document.write(myChildren);
+    </script>
+    
+    <h2>Slicing an Array</h2>
+    <p>The slice() method slices out a piece of an array into a new array.<br>
+
+      This example slices out a part of an array starting from array element 1 ("Orange"):</p>
+      <pre>
+        var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        var citrus = fruits.slice(1);
+        var citrus2 = fruits.slice(1, 2);
+        document.write(citrus+"<br/>");
+        document.write(citrus2);  
+      </pre>
+      <p>The slice() method can take two arguments like slice(1, 2).</p>
+
+      <script>
+        var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        var citrus = fruits.slice(1);
+        var citrus2 = fruits.slice(1, 2);
+        document.write(citrus+"<br/>");
+        document.write(citrus2);
+      </script>
+
+      <h2>Automatic toString()</h2>
+      <pre>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.write(fruits.toString());
+      </pre>
+      <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.write(fruits.toString());
+      </script>
+
+    
+
 </body>
 </html>

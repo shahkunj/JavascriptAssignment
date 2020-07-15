@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3 assignment3</title>
+</head>
+<body>
+
+    <h1><mark>Q-3 as Assignment1</mark>-Brief into on available datatypes in Javascript</h1>
+    <p>The Concept of Data Types
+    In programming, data types is an important concept.</br>
+    
+    To be able to operate on variables, it is important to know something about the type.</br>
+    
+    Without data types, a computer cannot safely solve this:</p>
+
+    <h2>JavaScript Numbers</h2>
+   <p> JavaScript has only one type of numbers.
+
+    Numbers can be written with, or without decimals:</p>
+
+    <p id="demo"></p>
+    <p>Extra large or extra small numbers can be written with scientific (exponential) notation:</p>
+    <script>
+    var x1 = 34.00; // Written with decimals
+    var x2 = 34;// Written without decimals
+    var x3 = 3.14;
+    var y = 123e5;
+    var z = 123e-5;
+
+    document.getElementById("demo").innerHTML =
+    x1 + "<br>" + x2 + "<br>" + x3 + "<br>" + y + "<br>" + z;
+    </script>
+
+    <h2>JavaScript Booleans</h2>
+    <p>Booleans can only have two values: true or false.</p>
+
+    <p>Booleans can have two values: true or false:</p>
+
+    <p id="demo1"></p>
+
+    <script>
+    var x = 5;
+    var y = 5;
+    var z = 6;
+    document.getElementById("demo1").innerHTML =
+    (x == y) + "<br>" + (x == z);
+    </script>
+
+    <h2>JavaScript Strings</h2>
+    <p>A string (or a text string) is a series of characters like "Kunj Shah".</br>
+
+        Strings are written with quotes. You can use single or double quotes:</p>
+    
+        <p id="demo3"></p>
+
+        <script>
+        var carName1 = "Volvo XC60";//Double quotes
+        var carName2 = 'Volvo XC60';// single quotes
+
+        document.getElementById("demo3").innerHTML =
+        carName1 + "<br>" + 
+        carName2; 
+        </script>
+
+    <h2>JavaScript Arrays  </h2>  
+    <p>JavaScript arrays are written with square brackets.</br>
+
+        Array items are separated by commas.</br>
+        
+        The following code declares (creates) an array called cars, containing three items (car names):</p>
+
+        <p id="demo4"></p>
+
+        <script>
+        var cars = ["Saab","Volvo","BMW"];
+
+        document.getElementById("demo4").innerHTML = cars[2];
+        </script>
+
+    <h2>JavaScript Objects</h2>
+    <p>JavaScript objects are written with curly braces {}.</br>
+
+        Object properties are written as name:value pairs, separated by commas.</p>
+    
+        <p id="demo5"></p>
+
+        <script>
+        var person = {
+          firstName : "Kunj",
+          lastName  : "shah",
+          age     : 20,
+        };
+        
+        document.getElementById("demo5").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+        </script>
+
+    <h2>The typeof Operator</h2>
+    <p>You can use the JavaScript typeof operator to find the type of a JavaScript variable.</br>
+
+        The typeof operator returns the type of a variable or an expression:</p>
+
+        <p>The typeof operator returns the type of a variable or an expression.</p>
+
+        <p id="demo6"></p>
+
+        <script>
+            var car = "Volvo";
+            car = undefined;
+        document.getElementById("demo6").innerHTML = 
+        typeof "" + "<br>" +
+        typeof "John" + "<br>" + 
+        typeof 25 +  "<br>" +
+        typeof 25.334444444444+  "<br>" +
+        typeof null +  "<br>" +
+        car + "<br>" + typeof car;
+        </script>
+
+        <h2>JavaScript typeof</h2>
+        <p>The typeof operator returns object for both objects, arrays, and null.</p>
+        <p>The typeof operator does not return object for functions.</p>
+
+        <p id="demo7"></p>
+
+        <script>
+        document.getElementById("demo7").innerHTML = 
+        typeof {name:'john', age:34} + "<br>" +
+        typeof [1,2,3,4] + "<br>" +
+        typeof null + "<br>" +
+        typeof function myFunc(){};
+        </script>
+
+        <h2>Difference Between Undefined and Null</h2>
+        <p>undefined and null are equal in value but different in type:</p>
+        <p>Undefined and null are equal in value but different in type:</p>
+
+        <p id="demo8"></p>
+
+        <script>
+        document.getElementById("demo8").innerHTML =
+        typeof undefined + "<br>" +
+        typeof null + "<br><br>" +
+        (null === undefined) + "<br>" +
+        (null == undefined);
+        </script>
+
+    </body>
+    </html>
+
+    
+</body>
+</html>
+
+
+

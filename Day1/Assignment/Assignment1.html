@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1-Assignment1 day1 technically</title>
+</head>
+<body>
+    <h1><mark>Q-1 as Assignment1</mark>-Explore and explain the various methods of console function.</h1>
+
+    <h2>=>  console.assert() </h2>
+    <p>Press<mark>F12</mark>  on your keyboard to see the message in the console view.</p>
+
+    <p>Syntax::console.assert(expression, message)</p>
+    <p>Example::console.assert(document.getElementById("demo"), "You have no element with ID 'demo'");</p>
+    <script>
+    console.assert(document.getElementById("demo"), "You have no element with ID 'demo'");
+    </script>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+
+    <h2>=> console.clear()</h2>
+    <u><p>Clear all messages in the console:</p></u>
+    <p>The console.clear() method will also write a message in the console: "Console was cleared".</p>
+    <p>Example::</p>
+
+    <p>Click the button to clear the console:</p>
+
+    <button onclick="myFunction()">Clear Console</button>
+    <script>
+        console.log("Hello! Press the button to clear the console!");
+
+        function myFunction() {
+        console.clear();
+        }
+
+    </script>
+
+    <h2>=> console.count()</h2>
+    <p>Write to the console the number of time the console.count() is called inside the loop:</p>
+    <p>Syntax::console.count(label)</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+
+    <script>
+
+        for (i = 0; i < 10; i++) {
+          console.count();
+        }
+        
+     </script>
+
+    <h2>=> console.error()</h2>
+    <p>The console.error() method writes an error message to the console.</p>
+    <p>Syntax::console.error(message)</p>
+
+    <p>This example demonstrates how an object is displayed as an error message in the console view.</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+    <script>
+    var myObj = { firsname : "Kunj", lastname : "Shah" };
+    console.error(myObj);
+    </script>
+
+    <h2>=> console.info()</h2>
+    <p>The console.info() method writes a message to the console.</p>
+    <p>Syntax::console.info(message)</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+    <script>
+
+        console.info("Hey u are inside the console.info which print the messages!");
+        
+    </script>
+
+    <h2>=> console.<mark>warn()</mark></h2>
+    <p>The console.warn() method writes a warning to the console.</p>
+    <p>Syntax::console.warn(message)</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+    <script>
+        var myArr = ["Orange", "Banana", "Mango", "Kiwi" ];
+        console.warn(myArr);
+    </script>
+
+
+    <h2>=> console.log()</h2>
+    <p>The console.log() method writes a message to the console.</p>
+    <p>Syntax::console.log(message)</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+    <script>
+            
+            console.log("Hello man you are in console!");
+
+    </script>
+
+    <h2>=> console.table()</h2>
+    <p>The console.table() method writes a table in the console view.</p>
+    <p>Syntax::console.table(tabledata, tablecolumns)</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+
+    
+    <script>
+
+        var car1 = { name : "Audi", model : "A4" }
+        var car2 = { name : "Volvo", model : "XC90" }
+        var car3 = { name : "Ford", model : "Fusion" }
+
+        console.table([car1, car2, car3]);
+    </script>
+
+    <h2>=> console.time()</h2>
+    <p>The console.time() method starts a timer in the console view.</p>
+    <p>Syntax::console.time(label)</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+
+    <script>
+
+        console.time();
+        for (i = 0; i < 100000; i++) {
+          // some code
+        }
+        console.timeEnd();
+        
+     </script>
+
+    <h2>=> console.timeEnd()</h2>
+    <p>The console.timeEnd() method ends a timer, and writes the result in the console view.</p>
+    <p>Syntax::console.timeEnd(label)</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+    
+    <script>
+        var i;
+        console.time("test1");
+        for (i = 0; i < 100000; i++) {
+          // some code
+        }
+        console.timeEnd("test1");
+        
+    </script>
+
+
+
+
+
+    <h2>=> console.group()</h2>
+    <p>The console.group() method indicates the start of a message group.</br>
+
+        All messages will from now on be written inside this group.</p>
+    <p>Syntax::console.group(label)</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+    <script>
+
+        console.log("Hello Kunj!");
+        console.group();
+        console.log("Hello Kunj again, this time inside a group!");
+        console.log("Hello Kunj again, this time inside a group!");
+        
+    </script>
+
+    
+    
+    <h2>=> console.groupCollapsed()</h2>
+    <p>The console.groupCollapsed() method indicates the start of a collapsed message group.</br>
+
+    Click the expand button to open the message group.</p>
+    <p>Syntax::console.groupCollapsed(label)</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+
+    <script>
+
+        console.log("Heyyyyyyyy Kunj Shah wc to letsupgrade!");
+        console.groupCollapsed();
+        console.log("Hello Kunj once again, this time inside a collapsed group!");
+        
+    </script>
+
+    <h2> => console.groupEnd()</h2>
+    <p>The console.groupEnd() method indicates the end of a message group.</p>
+    <p>Syntax::console.groupEnd()</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+
+    <script>
+
+        console.log("Welcome to javascript!");
+        console.group();
+        console.log("Hey beginner, this time inside a group!");
+        console.groupEnd();
+        console.log("and we are back.");
+        
+    </script>
+
+
+    <h2>=>  console.trace() </h2>
+    <p>The console.trace() method displays a trace that show how the code ended up at a certain point.</p>
+    <p>Syntax::console.trace(label)</p>
+    <p>Example::</p>
+    <p>please Press<mark>F12</mark>  on your keyboard to see the message in the console view for output</p>
+
+    <p>By clicking the button, a function will be executed, which will execute another function, which will execute the console.trace() method, which will display this trace in the console.view.</p>
+
+    <button onclick="myFunc()">Start Trace</button>
+
+    <script>
+
+    function myFunc(){
+    myOtherFunction();
+    }
+
+    function myOtherFunction() {
+    console.trace();
+    }
+
+
+
+    </script>
+
+
+
+        
+
+     
+
+
+
+</body>
+</html>

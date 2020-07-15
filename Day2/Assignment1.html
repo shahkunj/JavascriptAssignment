@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Prompt for user input and output in console</h2>
+
+<p>click on the try it and open the console by pressing <mark>F12</mark></p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  var person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+    console.log(txt);
+  } else {
+    txt = "Hello " + person + "! How are you today?";
+    console.log(txt);
+  }
+  console.log(person);
+}
+</script>
+
+</body>
+</html>

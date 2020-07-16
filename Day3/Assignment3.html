@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1><mark>Question 3 as Assignment3</mark></h1>
+<p>give input of your marks and check your grade </p>
+
+<button onclick="myFunction()">check here your grade</button>
+
+<script>
+function myFunction() {
+  var marks = prompt("Please enter your marks");
+
+  var result =(marks>=50)? `Mark are ${marks} and grade is A`:
+              (marks<50 && marks>=35)?`Mark are ${marks} and grade is B`:
+                `Mark are ${marks} and grade is C and you are Failed`;
+  console.log(result);
+
+
+  
+}
+</script>
+
+</body>
+</html>

@@ -10,10 +10,48 @@
 function myFunction() {
   var marks = prompt("Please enter your marks");
 
-  var result =(marks>=50)? `Mark are ${marks} and grade is A`:
-              (marks<50 && marks>=35)?`Mark are ${marks} and grade is B`:
-                `Mark are ${marks} and grade is C and you are Failed`;
-  console.log(result);
+  // var result =(marks>=50)? `Mark are ${marks} and grade is A`:
+  //             (marks<50 && marks>=35)?`Mark are ${marks} and grade is B`:
+  //               `Mark are ${marks} and grade is C and you are Failed`;
+  // console.log(result);
+  switch(true){
+    case (marks >= 0 && marks<=39):
+      console.log(`Marks are '${marks}' and Grade is 'F'`);
+      break;
+    case (marks >= 40 && marks<=49):
+      console.log(`Marks are '${marks}' and Grade is 'E'`);
+      break;
+    case (marks >= 50 && marks<=54):
+      console.log(`Marks are '${marks}' and Grade is 'D'`);
+      break;
+    case (marks >= 55 && marks<=59):
+      console.log(`Marks are '${marks}' and Grade is 'D+'`);
+      break;
+    case (marks >= 60 && marks<=64):
+      console.log(`Marks are '${marks}' and Grade is 'C'`);
+      break;
+    case (marks >= 65 && marks<=69):
+      console.log(`Marks are '${marks}' and Grade is 'C+'`);
+      break;
+    case (marks >= 70 && marks<=74):
+      console.log(`Marks are '${marks}' and Grade is 'B'`);
+      break;
+    case (marks >= 75 && marks<=79):
+      console.log(`Marks are '${marks}' and Grade is 'B+'`);
+      break;
+    case (marks >= 80 && marks<=84):
+      console.log(`Marks are '${marks}' and Grade is 'A-'`);
+      break;
+    case (marks >= 85 && marks<=89):
+      console.log(`Marks are '${marks}' and Grade is 'A'`);
+      break;
+    case (marks >= 90 && marks<=100):
+      console.log(`Marks are '${marks}' and Grade is 'A+'`);
+      break;
+    default:
+      console.log(`Marks are '${marks}' and please type between 0-100`);
+    break;  
+  }
 
 
   

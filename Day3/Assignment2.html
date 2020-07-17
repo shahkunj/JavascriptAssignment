@@ -8,9 +8,10 @@
 
 <script>
 function myFunction() {
-  var OS = prompt("Please enter your OS name", "Android");
-  var version = prompt("Please enter your Version", "10");
-  console.log(`The OS name is ${OS} and version is ${version}`)
+  var OS = prompt("Please enter your OS name and version", "Android 10");
+  //var version = prompt("Please enter your Version", "10");
+  var arr = OS.split(" ");
+  console.log('The os name is ',arr[0],'and version is',arr[1]);
   
 }
 </script>

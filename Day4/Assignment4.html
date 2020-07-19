@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>its a calculator assignment number 4 of que-4 </h1>
+    <mark>go to console for operations of calculator</mark>
+    <script>
+        let num1 = +window.prompt("Enter the first number:");
+        console.log(`num=${num1}`);
+        let num2 = +window.prompt("Enter the second number:");
+        console.log(`num=${num2}`);
+        let expression =window.prompt("enter the operation:(for addition:+,subtraction:-,squareroot:**,Divide:/,Multiply:*,modulus:% key(num1 is number for percent, num2 is percenttoget) and for squareroot type the number in num1 only)");
+
+        switch(expression)
+        {
+            case '+':
+            console.log(`Addition=${num1+num2}`);
+            break;
+            case '-':
+            console.log(`Subtraction=${num1-num2}`);
+            break;
+            case '*':
+            console.log(`Multiply=${num1*num2}`);
+            break;
+            case '/':
+            console.log(`Divide=${num1/num2}`);
+            break;
+            case '**':
+            console.log(`squareroot=${Math.sqrt(num1)}`);
+            break;
+            case '%':
+            console.log(`modulus=${(num2 / 100) * num1}`);
+            break;
+        }
+
+    </script>
+</body>
+</html>

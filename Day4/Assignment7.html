@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = Number(prompt("Enter the Number till you find the Prime Number"));
+
+
+        var str = "";
+
+        for (var i = 1;i<=n;i++){
+            var sum = 0;
+            for (var j=i;j>=1;j--){
+                if(i%j==0)
+                sum=sum +1;
+            }
+
+            if (sum==2){
+            str = str + i + " ";
+        
+            }
+        }
+        document.write(`Prime Numbers till Number ${n} are: ${str}`);
+    </script>
+</body>
+</html>

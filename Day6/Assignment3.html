@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <style>
+          body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <p id ="time"></p>
+    <button onclick="myFunction()">Toggle dark mode</button>
+      <script>
+        var name = prompt("Enter your name");
+        // document.write(`welcome ${name} to Letsupgrade`);
+        document.getElementById("demo").innerHTML = `welcome ${name} to letsupgrade`;
+
+        // for showing the current time to user
+        const ctime = document.getElementById('time');
+
+
+        function clock(){
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            ctime.innerText = time;
+        }
+
+        // clock();
+
+        setInterval(clock,1000);
+
+        function myFunction() {
+          var element = document.body;
+          element.classList.toggle("dark-mode");
+        }
+
+      </script>  
+</body>
+</html>
+
+
+
+<!-- document.getElementById("demo").innerHTML = "Hello World!"; -->

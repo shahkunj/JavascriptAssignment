@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box  ;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="background" style="height: 100vh; width: 100%;">
+        <marquee><h1 style="color: azure;">Question 1 Day-6</h1></marquee>
+    </div>
+
+    <script>
+        var doc = document.getElementById("background");
+        var color = ["black", "blue", "brown", "green","violet","orange","red"];
+        var i = 0;
+        function change() {
+        doc.style.backgroundColor = color[i];
+        i++;
+        
+        if(i > color.length - 1) {
+            i = 0;
+        }
+        }
+        setInterval(change, 5000);
+    </script>
+
+</body>
+</html>
